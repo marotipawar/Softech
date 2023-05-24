@@ -2,6 +2,7 @@ package com.softtech.daoImpl;
 
 import com.softtech.dao.StudentDao;
 import com.softtech.data.StudentData;
+import com.softtech.exceptions.StudentNotFound;
 import com.softtech.model.Address;
 import com.softtech.model.Batch;
 import com.softtech.model.Student;
@@ -12,24 +13,36 @@ import java.util.List;
 @Repository
 public class StudentDaoImpl implements StudentDao {
     private StudentData studentData;
+    List<Student> data;
 
     public StudentDaoImpl(StudentData studentData) {
         this.studentData = studentData;
+        data=studentData.data();
     }
 
     @Override
     public Student findStudent(Integer id) {
-        return studentData.data().get(id);
+
+        try {
+            Student student = data.stream().filter(std -> std.getId() == id).findFirst().get();
+            if (student != null) {
+                return student;
+            }
+        } catch (Exception e) {
+
+            throw new StudentNotFound(id);
+        }
+        return null;
     }
 
     @Override
     public List<Student> findAllStudent() {
-        return studentData.data();
+        return data;
     }
 
     @Override
-    public Student updateStudent(Student std) {
-        Student student=studentData.data().get(std.getId());
+    public Student updateStudent(Integer id, Student std) {
+        Student student=data.stream().filter(s->s.getId()==id).findFirst().get();
         student.setFirstName(std.getFirstName());
         student.setLastName(std.getLastName());
         Batch batch =student.getBatch();
@@ -55,7 +68,7 @@ public class StudentDaoImpl implements StudentDao {
 
     @Override
     public void deleteStudent(Integer id) {
-        Student student=studentData.data().get(id);
+        Student student=data.stream().filter(student1 -> student1.getId()==id).findFirst().get();
         studentData.data().remove(student);
 
     }

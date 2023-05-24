@@ -3,6 +3,7 @@ package com.softtech.data;
 import com.softtech.model.Address;
 import com.softtech.model.Batch;
 import com.softtech.model.Student;
+import org.hibernate.dialect.SqlAstTranslatorWithUpsert;
 import org.springframework.stereotype.Component;
 
 import java.math.BigInteger;
@@ -13,8 +14,9 @@ import java.util.stream.Stream;
 
 @Component
 public class StudentData {
+    private static List<Student> studentList;
 
-    public List<Student> data(){
+    static{
         Batch batch1=Batch.builder()
                 .id(1)
                 .name("15 APl 2023")
@@ -22,7 +24,7 @@ public class StudentData {
                         "Database Testing", "Postman","Junit","TestNG","Cucumber","Selenium" })
                 .duration(4)
                 .fees(35000.0)
-                .endDate(LocalDateTime.now())
+                .startDate(LocalDateTime.now())
                 .endDate(LocalDateTime.now().plusMonths(4))
                 .build();
 
@@ -103,7 +105,10 @@ public class StudentData {
                 .batch(batch1)
                 .build();
 
-        List<Student> studentList=Stream.of(st1,st2,st3,st4).collect(Collectors.toList());
+        studentList=Stream.of(st1,st2,st3,st4).collect(Collectors.toList());
+
+    }
+    public  List<Student> data(){
         return studentList;
     }
 }

@@ -7,6 +7,6 @@ import java.util.List;
 public interface StudentDao {
     public Student findStudent(Integer id);
     public List<Student> findAllStudent();
-    public Student updateStudent(Student std);
+    public Student updateStudent(Integer id, Student std);
     public void deleteStudent(Integer id);
 }

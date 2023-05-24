@@ -27,8 +27,8 @@ public class StudentServiceImpl implements StudentServices {
     }
 
     @Override
-    public Student updateStudent(Student std) {
-        return studentDao.updateStudent(std);
+    public Student updateStudent(Integer id, Student std) {
+        return studentDao.updateStudent(id, std);
     }
 
     @Override
