@@ -1,10 +1,11 @@
 package com.softtech.controller;
 
+import com.softtech.exceptions.StudentNotFound;
 import com.softtech.model.Student;
 import com.softtech.services.StudentServices;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,11 +19,30 @@ public class StudentController {
     }
     @GetMapping(path = {"/student/{id}"})
     public Student findStudent(@PathVariable Integer id){
-        return studentServices.findStudent(id);
-    }
+        Student st=studentServices.findStudent(id);
+        if(st!=null){
+            return st;
+        }else {
+            throw new StudentNotFound(id);
+        }
+        }
     @GetMapping(path = {"/students"})
     public List<Student> findAStudents(){
         return studentServices.findAllStudent();
     }
+
+    @PutMapping(path = {"/update/{id}"})
+    public Student updateStudent(@PathVariable Integer id, @RequestBody Student std){
+    return studentServices.updateStudent(id,std);
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping(path = {"/delete/{id}"})
+    public void deleteStudent(@PathVariable Integer id){
+        studentServices.deleteStudent(id);
+
+    }
+
+
 
 }
