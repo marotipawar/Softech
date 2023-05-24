@@ -21,6 +21,12 @@ public class StudentDaoImpl implements StudentDao {
     }
 
     @Override
+    public Student create(Student std) {
+        data.add(std);
+        return std;
+    }
+
+    @Override
     public Student findStudent(Integer id) {
 
         try {

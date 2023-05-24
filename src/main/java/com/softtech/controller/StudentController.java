@@ -17,6 +17,12 @@ public class StudentController {
     public StudentController(StudentServices studentServices) {
         this.studentServices = studentServices;
     }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping(path = {"/create"})
+    public Student createStudent(@RequestBody Student st){
+       return studentServices.create(st);
+    }
     @GetMapping(path = {"/student/{id}"})
     public Student findStudent(@PathVariable Integer id){
         Student st=studentServices.findStudent(id);

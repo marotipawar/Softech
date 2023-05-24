@@ -17,6 +17,12 @@ public class StudentServiceImpl implements StudentServices {
     }
 
     @Override
+    public Student create(Student student) {
+
+        return studentDao.create(student);
+    }
+
+    @Override
     public Student findStudent(Integer id) {
         return studentDao.findStudent(id);
     }
