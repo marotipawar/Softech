@@ -12,7 +12,7 @@ import java.math.BigInteger;
 @AllArgsConstructor
 @Builder
 public class Student {
-    private Long id;
+    private Integer id;
     private String firstName;
     private String lastName;
     private BigInteger mobile;

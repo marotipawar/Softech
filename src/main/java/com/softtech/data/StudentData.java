@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 @Component
 public class StudentData {
 
-    public List<Student> fetch(){
+    public List<Student> data(){
         Batch batch1=Batch.builder()
                 .id(1)
                 .name("15 APl 2023")
@@ -27,7 +27,7 @@ public class StudentData {
                 .build();
 
         Student st1=Student.builder()
-                .id(101l)
+                .id(101)
                 .firstName("Maroti")
                 .lastName("Pawar")
                 .panNo("MP564NA")
@@ -47,7 +47,7 @@ public class StudentData {
 
 
         Student st2=Student.builder()
-                .id(102l)
+                .id(102)
                 .firstName("Jyoti")
                 .lastName("Patil")
                 .panNo("JP5845NED")
@@ -66,7 +66,7 @@ public class StudentData {
                 .build();
 
         Student st3=Student.builder()
-                .id(103l)
+                .id(103)
                 .firstName("Priyanka")
                 .lastName("Pawar")
                 .panNo("PP6584L")
@@ -85,7 +85,7 @@ public class StudentData {
                 .build();
 
         Student st4=Student.builder()
-                .id(104l)
+                .id(104)
                 .firstName("Aranv")
                 .lastName("Patil")
                 .panNo("AP6584N")
