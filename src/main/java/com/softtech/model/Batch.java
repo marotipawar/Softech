@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 public class Batch {
     private Integer id;
     private String name;
+    private String[] subs;
     private LocalDateTime startDate;
     private LocalDateTime endDate;
     private Double fees;
