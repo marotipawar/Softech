@@ -39,6 +39,7 @@ public class StudentController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping(path = {"/delete/{id}"})
     public void deleteStudent(@PathVariable Integer id){
+        System.out.println(id);
         studentServices.deleteStudent(id);
 
     }
