@@ -16,7 +16,6 @@ public class StudentController {
     public StudentController(StudentServices studentServices) {
         this.studentServices = studentServices;
     }
-
     @GetMapping(path = {"/student/{id}"})
     public Student findStudent(@PathVariable Integer id){
         return studentServices.findStudent(id);
@@ -25,4 +24,5 @@ public class StudentController {
     public List<Student> findAStudents(){
         return studentServices.findAllStudent();
     }
+
 }
