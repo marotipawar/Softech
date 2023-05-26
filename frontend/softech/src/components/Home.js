@@ -1,6 +1,8 @@
 import Footer from "./Footer";
 import Header from "./Header";
 import  "../output.css";
+import MainContent from "./content/MainContent";
+import Login from "./Login";
 export default function Home(){
     return(
         <>
@@ -10,8 +12,9 @@ export default function Home(){
                 <Header />
             </div>
             
-            <div className="flex-1 mx-8 ">
-                
+            <div className="flex-1  bg-orange-400">
+            
+                <Login/>
             </div>
 
             <div>

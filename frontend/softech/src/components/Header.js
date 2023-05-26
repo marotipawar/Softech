@@ -7,7 +7,10 @@ export default function Header(){
         <div className="text-gray-700 p-4 sm:flex justify-between bg-gray-100">
         <div className="sm:flex items-center space-x-4 justify-center">
             <div className="text-2xl font-semibold hover:text-orange-500 cursor-pointer">
-                <a href="#">Softtech </a>
+               <div className="flex flex-col mr-8">
+               <a href="#" className="font-bold text-2xl">SOFTTECH </a>
+               <p className="font-light text-sm">Taining | Placement</p>
+               </div>
         </div>
         <nav className="">
                 <ul className="sm:flex items-center space-x-2 font-medium">
@@ -17,7 +20,7 @@ export default function Header(){
                 </ul>
             </nav>  
         </div>
-        <div>
+        <div className="flex items-center">
             <nav>
                 <ul className="sm:flex space-x-4">
                     <li className=""><a href="/root/logout" className="px-3 py-1 rounded-lg bg-green-500 text-gray-100"><FontAwesomeIcon icon={faRightToBracket} /> Sign in</a></li>
