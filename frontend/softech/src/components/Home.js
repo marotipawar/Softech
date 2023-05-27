@@ -3,7 +3,11 @@ import Header from "./Header";
 import  "../output.css";
 import MainContent from "./content/MainContent";
 import Login from "./Login";
+import Signup from "./signup";
+import { useLogin } from "./context/LoginContext";
+import { Outlet } from "react-router-dom";
 export default function Home(){
+    
     return(
         <>
             <div className="">
@@ -14,7 +18,7 @@ export default function Home(){
             
             <div className="flex-1  bg-orange-400">
             
-                <Login/>
+              <Outlet />
             </div>
 
             <div>
