@@ -19,7 +19,7 @@ export default function MainContent(){
                          trainers who have gained experience and worked for a wide range of leading organisations.</p>
                 </div>
                 <div className="w-1/3 ml-16 h-2/3 ">
-                    <div class="h-full bg-gray-100 drop-shadow-xl rounded-md">
+                    <div className="h-full bg-gray-100 drop-shadow-xl rounded-md">
                         <div className="h-full sm:flex flex-col justify-between ">
                         
                              <FontAwesomeIcon icon={faBugSlash} className="font-bold h-16 mt-14 text-orange-500 mb-8"/>

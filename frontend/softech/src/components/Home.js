@@ -9,14 +9,14 @@ import { Outlet } from "react-router-dom";
 export default function Home(){
     
     return(
-        <>
-            <div className="">
+      
+            
             <div className="h-screen flex flex-col justify-between">
             <div className=" drop-shadow-lg"> 
                 <Header />
             </div>
             
-            <div className="flex-1  bg-orange-400">
+            <div className="flex-1">
             
               <Outlet />
             </div>
@@ -25,9 +25,9 @@ export default function Home(){
                 <Footer/>
             </div>
             </div>
-            </div>
+           
 
-        </>
+      
 
     );
 }
