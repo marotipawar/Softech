@@ -1,3 +1,5 @@
+import { Link, Outlet } from "react-router-dom";
+
 export default function StudyMaterial(){
     return (
         
@@ -10,17 +12,17 @@ export default function StudyMaterial(){
     
         <li>
             <a href="#basic-usage" class="block py-1  font-medium text-gray-800 dark:text-gray-200">
-                Basic usage
+                Manual Testing
             </a>
         </li>
         <li class="ml-4">
-            <a href="#adding-an-outer-shadow" class="group flex items-start py-1 text-gray-800 dark:text-gray-200">
+            <Link to="/home/studyMaterial/whtIsST" class="group flex items-start py-1 text-gray-800 dark:text-gray-200">
                 <svg width="3" height="24" viewBox="0 -9 3 24"
                     class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
                     <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
                     </path>
-                </svg>Adding an outer shadow
-            </a>
+                </svg>What is Software Testing
+            </Link>
         </li>
         <li class="ml-4">
             <a href="#adding-an-inner-shadow"
@@ -99,14 +101,7 @@ export default function StudyMaterial(){
             </div>
 
         <div className="bg-gray-100 w-2/3 p-8 overflow-y-scroll  container-height" >
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, accusantium amet? Consequatur fugit libero qui et expedita, ipsa cum numquam, quasi laborum, quaerat facere architecto ex explicabo accusantium odio pariatur?
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus quam consequatur, quisquam expedita consectetur ex dignissimos. Provident officia inventore aperiam possimus temporibus quae officiis. Ipsa eligendi nisi impedit natus cupiditate.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, culpa, fugit, vero unde veritatis voluptates totam a repellat molestias ipsam dicta natus! Laborum fugiat laboriosam, sapiente temporibus corporis praesentium repellat!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, impedit itaque dolores accusamus corporis veritatis nisi quam expedita eligendi doloremque voluptatem sit. Velit quas rerum quibusdam earum nulla dolorum odit.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti, magnam est laudantium repellat aspernatur quod dolore. Accusantium labore unde placeat, quos repellendus voluptas ad at expedita perferendis iusto nam error.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum optio vitae eum recusandae aperiam ullam, eveniet ut soluta tenetur laboriosam quos maiores ad iusto fugit officiis distinctio veniam in autem.
-                div-2
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim beatae dolores adipisci error illo officiis a, earum assumenda illum, tempore fugiat ex cupiditate! Animi eius nemo numquam dolore saepe voluptatum?
+           <Outlet/>
             </div>
         </div>
     );
