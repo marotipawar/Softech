@@ -7,38 +7,38 @@ export default function StudyMaterial(){
             <div className="bg-gray-100 w-1/5 p-4">
                 
             <div class="px-8">
-    <h5 class="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">Study Materials</h5>
-    <ul class="text-slate-700 text-sm leading-6">
+    <h5 class="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-gray-800">Study Materials</h5>
+    <ul class="text-gray-800 text-sm leading-6">
     
         <li>
-            <a href="#basic-usage" class="block py-1  font-medium text-gray-800 dark:text-gray-200">
+            <a href="#basic-usage" class="block py-1  font-medium text-gray-800 dark:text-gray-800">
                 Manual Testing
             </a>
         </li>
         <li class="ml-4">
-            <Link to="/home/studyMaterial/whtIsST" class="group flex items-start py-1 text-gray-800 dark:text-gray-200">
+            <Link to="/home/studyMaterial/whtIsST" class="group flex items-start py-1 text-gray-800 dark:text-gray-800">
                 <svg width="3" height="24" viewBox="0 -9 3 24"
-                    class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                    class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-800 dark:group-hover:text-slate-500">
                     <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
                     </path>
-                </svg>What is Software Testing
+                </svg>Software Testing
             </Link>
         </li>
         <li class="ml-4">
-            <a href="#adding-an-inner-shadow"
-                class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">
+            <Link to="/home/studyMaterial/sdlc" href="#adding-an-inner-shadow"
+                class="group flex items-start py-1 hover:text-slate-900 dark:text-gray-800 dark:hover:text-slate-800">
                 <svg width="3" height="24" viewBox="0 -9 3 24"
-                    class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                    class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-gray-800">
                     <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
                     </path>
-                </svg>Adding an inner shadow
-            </a>
+                </svg>SDLC
+            </Link>
         </li>
         <li class="ml-4">
             <a href="#removing-the-shadow"
-                class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">
+                class="group flex items-start py-1 hover:text-slate-900 dark:text-gray-800 dark:hover:text-gray-800">
                 <svg width="3" height="24" viewBox="0 -9 3 24"
-                    class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                    class="mr-2 text-slate-800 overflow-visible group-hover:text-gray-800-600 dark:text-gray-800 dark:group-hover:text-gray-800">
                     <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
                     </path>
                 </svg>Removing the shadow

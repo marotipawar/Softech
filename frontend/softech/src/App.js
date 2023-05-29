@@ -11,7 +11,8 @@ import Logout from "./components/Logout";
 import Profile from "./components/student/Profile";
 import StudyMaterial from "./components/student/StudyMaterial";
 import PageNotFound from "./components/PageNotFound";
-import WhatIsST from "./components/student/studyMaterials/WhatIsST";
+import WhatIsST from "./components/student/material/WhatIsST";
+import Sdlc from "./components/student/material/Sdlc";
 export default function App() {
 
    const {login}= useLogin();
@@ -67,6 +68,10 @@ export default function App() {
                {
                   path:'/home/studyMaterial/whtIsST',
                   element:<Auth><WhatIsST /></Auth>
+               },
+               {
+                  path:"/home/studyMaterial/sdlc",
+                  element:<Auth><Sdlc /></Auth>
                }
             ]
          },
